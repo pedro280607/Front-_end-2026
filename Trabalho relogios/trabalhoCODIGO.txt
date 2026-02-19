@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> COLEÇÃO DE RELÓGIOS </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background:#895129;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+
+        h1{
+            color: gold;
+            text-align: center;
+            margin-top: 30px;
+            letter-spacing: 3px;
+        }
+
+        p{
+            color: #e0e0e0;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            padding: 15px;
+        }
+
+        .gallery{
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .item{
+            display: inline-block;
+            margin: 20px;
+        }
+
+        img{
+            height: 200px;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        
+
+        .item p{
+            color: gold;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<h1> MINHA COLEÇÃO DE RELÓGIOS </h1>
+
+<p>
+Minha coleção reúne modelos que representam elegância, luxo e desempenho. 
+Cada relógio possui uma identidade própria e simboliza precisão e estilo.
+</p>
+
+<div class="gallery">
+
+    <div class="item">
+        <img src=imagem/Rolex.jpg">
+        <p>Rolex Submariner</p>
+    </div>
+
+    <div class="item">
+        <img src="imagem/Omega.jpg">
+        <p>Omega Speedmaster</p>
+    </div>
+
+    <div class="item">
+        <img src="imagem/TAG.jpg">
+        <p>TAG Heuer Formula 1</p>
+    </div>
+
+    <div class="item">
+        <img src="imagem/Seiko.jpg">
+        <p>Seiko Prospex</p>
+    </div>
+
+    <div class="item">
+        <img src="imagem/casio">
+        <p>Casio G-Shock</p>
+    </div>
+
+</div>
+
+</body>
+</html>
