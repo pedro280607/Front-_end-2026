@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> REDES DE COMPUTADORES </title>
+	<style>
+	nav{
+    		background-color: #3b383c;
+    		font-family: "Segoe UI", sans-serif;
+    		border-radius: 30px;
+    		margin: 20px;
+	}
+
+	nav ul{
+    		list-style: none;
+   		 margin: 0;
+    		padding: 0;
+    		display: flex;
+    		justify-content: center;
+	}
+
+	nav ul li{
+    		margin: 0;
+	}
+
+	nav ul li a{
+    		display: block;
+    		padding: 15px 20px;
+    		color: #fff;
+    		text-decoration: none;
+    		transition: background-color 0.4s;
+	}
+
+	nav ul li a:hover{
+   		 background-color: #555;
+   		 border-radius: 30px;
+	}
+		
+
+	body{	background-color: #ffefd5;
+			font-family: Trebuchet MS, sans-serif;
+			align-items: center;
+	
+	}
+	h1{ color: #000000;
+	    	font-family: Andale Mono, monospace;
+		text-align: center;	
+		letter-spacing: 0.1px;
+ 		margin-bottom: 5px; 
+		word-spacing: -8px;	
+	}
+	h2{ color: #000000;
+		text-align: left;
+		margin-left: 15px;
+		letter-spacing: 0.5px;
+ 		margin-bottom: 5px;
+	}
+	.descricao { color: #000000;
+    			text-align: left;
+    			margin-left: 20px;
+    			text-indent: 30px;
+    			line-height: 1.6;
+    			margin-bottom: 5px;
+			margin-top: 5px;
+			
+	}
+
+	p{ color: #000000;
+	   text-align: center;
+	   margin-top: 0px;  
+ 			
+	}
+	html{
+		scroll-behavior: smooth;
+	}	
+	</style>
+</head>
+<!-- CSS fim/ Inicio html -->
+
+<body>
+	<nav>
+    <ul>
+        <li><a href="#lan">LAN</a></li>
+        <li><a href="#man">MAN</a></li>
+        <li><a href="#wan">WAN</a></li>
+        <li><a href="#pan">PAN</a></li>
+        <li><a href="#can">CAN</a></li>
+        <li><a href="#san">SAN</a></li>
+        <li><a href="#wlan">WLAN</a></li>
+    </ul>
+</nav>
+
+<!---------------------------------------------------------------------------------------------------------DIVISORIA----------------------------------------------------------------------------------------------------------------------->
+
+	<h1>ANÁLISE DAS CLASSIFICAÇÕES DE REDES DE COMPUTADORES</h1>
+	<p> Analise das classificação de redes de computadores da disciplina de Rede de Computadores, ministrada no 1º semestre </p>  
+	
+
+	<h2 id="lan">LAN (Local Area Network)</h2>
+	<p class="descricao">A LAN (Local Area Network), ou Rede Local, é um tipo de rede de computadores utilizada para interligar dispositivos dentro de uma área geográfica limitada, como residências, escolas, empresas e prédios comerciais. Seu principal objetivo é permitir a comunicação entre dispositivos e o compartilhamento de recursos, como arquivos, impressoras, servidores e acesso à internet.</p>
+
+<p class="descricao">A implementação de uma LAN pode ser feita de forma cabeada, utilizando cabos de rede como o cabo Ethernet (par trançado), ou de forma sem fio, por meio da tecnologia Wi-Fi. Em redes cabeadas, o alcance costuma ser de até 100 metros por cabo, oferecendo maior estabilidade e menor interferência. Já nas redes sem fio, o alcance pode variar entre aproximadamente 10 e 300 metros, dependendo da frequência utilizada (2.4 GHz ou 5 GHz), da potência do roteador e das barreiras físicas presentes no ambiente.</p>
+
+<p class="descricao">Uma das principais características da rede LAN é sua alta velocidade de transmissão de dados. As taxas mais comuns são 10 Mbps, 100 Mbps e 1 Gbps, podendo chegar a velocidades ainda maiores em redes mais modernas. Essa alta capacidade de transmissão permite a troca rápida de informações, o uso simultâneo da internet por vários dispositivos e a execução de atividades como videoconferências, jogos online e compartilhamento de arquivos pesados sem grandes atrasos.</p>
+
+<p class="descricao">Além disso, a LAN é amplamente utilizada para criar redes privadas e seguras, possibilitando o controle de acesso e a proteção das informações dentro de um determinado ambiente. Em empresas, por exemplo, ela facilita o compartilhamento de sistemas internos e servidores, aumentando a produtividade e a organização. Em residências, permite conectar computadores, smartphones, televisores e dispositivos inteligentes em uma única rede doméstica.</p>
+
+<p class="descricao">Dessa forma, a rede LAN é fundamental para ambientes que necessitam de comunicação rápida, eficiente e confiável entre dispositivos localizados em uma mesma área física.</p>
+
+<!---------------------------------------------------------------------------------------------------------DIVISORIA----------------------------------------------------------------------------------------------------------------------->
+
+	<h2 id="wan">WAN (Wide Area Network)</h2>
+	<p class="descricao">A WAN (Wide Area Network), ou Rede de Longa Distância, é um tipo de rede de computadores que cobre grandes áreas geográficas, podendo abranger cidades, estados, países e até continentes. Diferente da LAN, que opera em um espaço limitado, a WAN é utilizada para conectar redes locais que estão fisicamente distantes umas das outras.</p>
+
+
+	<p class="descricao">A WAN funciona por meio de infraestruturas de telecomunicações, como cabos de fibra óptica, linhas telefônicas, enlaces de rádio, satélites e redes móveis. Essas conexões permitem a transmissão de dados a longas distâncias, possibilitando a comunicação entre filiais de empresas, instituições governamentais e usuários espalhados pelo mundo.</p>
+
+
+	<p class="descricao">Um dos maiores exemplos de WAN é a própria internet, que conecta milhões de redes locais globalmente. Empresas que possuem unidades em diferentes cidades ou países utilizam redes WAN para integrar seus sistemas internos, bancos de dados e servidores, garantindo que todos os setores tenham acesso às mesmas informações em tempo real.</p>
+
+
+	<p class="descricao">Em relação à velocidade, as redes WAN geralmente apresentam taxas de transmissão variadas, dependendo da tecnologia utilizada e da infraestrutura disponível. Embora possam ser muito rápidas, normalmente possuem maior latência (tempo de resposta) quando comparadas às redes LAN, devido à grande distância percorrida pelos dados.</p>
+
+
+	<p class="descricao">Além disso, a WAN exige maior investimento em segurança e gerenciamento, pois envolve comunicação em longas distâncias e, muitas vezes, utiliza redes públicas como meio de transmissão. Por isso, é comum o uso de tecnologias como VPNs (Redes Privadas Virtuais) para proteger as informações trafegadas.</p>
+
+
+	<p class="descricao">Dessa forma, a WAN é essencial para conectar redes em diferentes regiões do mundo, permitindo a comunicação global e o funcionamento de serviços modernos como internet, sistemas bancários, plataformas de streaming e redes corporativas internacionais.</p>
+
+<!---------------------------------------------------------------------------------------------------------DIVISORIA----------------------------------------------------------------------------------------------------------------------->
+	
+	<h2 id="man">MAN (Metropolitan Area Network)</h2>
+	<p class="descricao">A MAN (Metropolitan Area Network), ou Rede Metropolitana, é um tipo de rede de computadores que cobre uma área geográfica maior que uma LAN, porém menor que uma WAN. Ela é projetada para interligar redes locais dentro de uma mesma cidade ou região metropolitana, permitindo a comunicação entre diferentes prédios, bairros ou unidades de uma organização.</p>
+
+
+	<p class="descricao">A rede MAN é frequentemente utilizada por empresas de grande porte, universidades, órgãos governamentais e provedores de internet para conectar múltiplas unidades distribuídas em uma cidade. Por exemplo, uma universidade com vários campi espalhados pode utilizar uma MAN para integrar seus sistemas acadêmicos, bibliotecas, laboratórios e servidores centrais.</p>
+
+
+	<p class="descricao">Em termos de infraestrutura, a MAN geralmente utiliza conexões de alta velocidade, como fibra óptica, cabos de alta capacidade ou enlaces de rádio. Sua taxa de transmissão costuma ser elevada, podendo alcançar velocidades comparáveis às de redes LAN corporativas, mas com maior alcance. O objetivo principal é garantir comunicação rápida e estável entre diferentes pontos dentro da mesma área urbana.</p>
+
+
+	<p class="descricao">Comparada à LAN, a MAN possui maior cobertura geográfica, podendo atingir dezenas de quilômetros. Entretanto, quando comparada à WAN, sua abrangência é menor, pois não se estende a nível nacional ou internacional. Dessa forma, ela ocupa uma posição intermediária na classificação das redes quanto ao alcance.</p>
+
+
+	<p class="descricao">Além disso, a MAN pode ser pública ou privada. Algumas cidades utilizam redes metropolitanas para oferecer serviços de internet pública, câmeras de monitoramento urbano e integração de serviços municipais. Já no setor privado, empresas utilizam MAN para integrar suas filiais dentro de uma mesma cidade com alta velocidade e segurança.</p>
+
+
+	<p class="descricao">Portanto, a rede MAN é uma solução eficiente para conectar múltiplas redes locais dentro de uma área urbana, oferecendo alto desempenho e integração regional entre sistemas e dispositivos.</p>
+
+<!---------------------------------------------------------------------------------------------------------DIVISORIA----------------------------------------------------------------------------------------------------------------------->
+
+	<h2 id="pan">PAN (Personal Area Network)</h2>	
+	<p class="descricao">A PAN (Personal Area Network), ou Rede de Área Pessoal, é um tipo de rede de computadores utilizada para conectar dispositivos em uma área muito pequena, geralmente ao redor de uma única pessoa. Seu alcance costuma ser limitado a poucos metros, normalmente até 10 metros, sendo ideal para comunicação entre dispositivos pessoais.</p>
+
+
+	<p class="descricao">A principal característica da PAN é sua curta distância de operação. Ela é utilizada para conectar aparelhos como smartphones, notebooks, tablets, fones de ouvido sem fio, smartwatches, teclados e mouses. Um exemplo comum de PAN é a conexão Bluetooth entre um celular e um fone de ouvido sem fio.</p>
+
+
+	<p class="descricao">A comunicação em uma rede PAN pode ocorrer por meio de tecnologias como Bluetooth, infravermelho, NFC (Near Field Communication) e até mesmo conexão USB. Entre essas tecnologias, o Bluetooth é a mais utilizada, permitindo a troca de dados sem necessidade de cabos.</p>
+
+
+	<p class="descricao">Em relação à velocidade de transmissão, a PAN normalmente possui taxas menores quando comparadas às redes LAN, MAN ou WAN, pois seu objetivo principal não é cobrir grandes distâncias ou conectar múltiplos sistemas complexos, mas sim facilitar a comunicação rápida e prática entre dispositivos pessoais.</p>
+
+
+	<p class="descricao">Além disso, a PAN é considerada uma rede simples e de baixo custo, sendo amplamente utilizada no dia a dia das pessoas. Ela possibilita sincronizar arquivos, transferir dados, conectar acessórios e compartilhar internet de um celular para outro dispositivo, por exemplo.</p>
+
+
+	<p class="descricao">Portanto, a rede PAN é essencial para a conectividade pessoal, permitindo a integração eficiente entre dispositivos eletrônicos em um espaço muito próximo ao usuário.</p>
+
+<!---------------------------------------------------------------------------------------------------------DIVISORIA----------------------------------------------------------------------------------------------------------------------->
+
+	<h2 id="can">CAN (Campus Area Network)</h2>
+	<p class="descricao">A CAN (Campus Area Network), ou Rede de Campus, é um tipo de rede de computadores que interliga diversas redes locais (LANs) dentro de uma área geográfica limitada, como um campus universitário, complexo empresarial, hospital ou centro industrial. Ela é maior que uma LAN, porém menor que uma MAN, sendo projetada para conectar múltiplos prédios próximos entre si.</p>
+
+
+	<p class="descricao">A principal função da CAN é permitir a comunicação eficiente entre diferentes departamentos ou unidades que fazem parte de uma mesma instituição. Por exemplo, em uma universidade, a rede CAN pode conectar bibliotecas, laboratórios, salas administrativas e prédios acadêmicos, garantindo que todos tenham acesso aos mesmos sistemas, servidores e bancos de dados.</p>
+
+
+	<p class="descricao">Em termos de infraestrutura, a CAN geralmente utiliza conexões de alta velocidade, como fibra óptica ou cabos de rede de grande capacidade, proporcionando comunicação rápida e estável entre os pontos conectados. Sua taxa de transmissão costuma ser semelhante à de redes LAN corporativas, podendo alcançar velocidades elevadas, dependendo da tecnologia implementada.</p>
+
+
+	<p class="descricao">Uma das vantagens da rede CAN é o controle centralizado. Como normalmente pertence a uma única organização, ela permite maior gerenciamento de segurança, controle de acesso e administração da rede. Isso facilita a manutenção, a proteção dos dados e a organização dos serviços internos.</p>
+
+
+	<p class="descricao">Dessa forma, a CAN é uma solução eficiente para instituições que precisam integrar múltiplos prédios ou setores dentro de uma mesma área física, oferecendo alto desempenho, organização e segurança na comunicação interna.</p>
+
+<!---------------------------------------------------------------------------------------------------------DIVISORIA----------------------------------------------------------------------------------------------------------------------->
+	<h2 id="san">SAN (Storage Area Network)</h2>
+	<p class="descricao">A SAN (Storage Area Network), ou Rede de Área de Armazenamento, é um tipo de rede especializada utilizada para conectar servidores a dispositivos de armazenamento de dados em alta velocidade. Diferente das redes como LAN, MAN ou WAN, que focam na comunicação entre computadores e usuários, a SAN tem como principal objetivo o armazenamento e o gerenciamento eficiente de grandes volumes de dados.</p>
+
+
+	<p class="descricao">Essa rede é muito utilizada em empresas, data centers e grandes organizações que precisam armazenar e acessar informações de forma rápida, segura e confiável. Em vez de os servidores armazenarem dados apenas em seus próprios discos internos, eles se conectam a um sistema centralizado de armazenamento por meio da SAN.</p>
+
+
+	<p class="descricao">A SAN utiliza tecnologias específicas de alta performance, como fibra óptica (Fibre Channel) ou protocolos como iSCSI, que permitem transmissão de dados em altíssimas velocidades e com baixa latência. Isso garante que os servidores acessem os dados quase como se estivessem armazenados localmente.</p>
+
+
+	<p class="descricao">Uma das principais vantagens da SAN é a centralização do armazenamento. Isso facilita o backup, a recuperação de dados, a escalabilidade (aumentar o espaço quando necessário) e a administração do sistema. Além disso, melhora a segurança e a confiabilidade, pois normalmente conta com sistemas redundantes para evitar perda de dados.</p>
+
+
+	<p class="descricao">A SAN é muito comum em ambientes corporativos que utilizam bancos de dados, sistemas empresariais, máquinas virtuais e aplicações críticas que exigem alto desempenho e grande capacidade de armazenamento.</p>
+
+
+	<p class="descricao">Portanto, a SAN é uma rede voltada especificamente para armazenamento de dados em larga escala, oferecendo alta velocidade, segurança e eficiência para organizações que lidam com grandes volumes de informação.</p>
+
+<!---------------------------------------------------------------------------------------------------------DIVISORIA----------------------------------------------------------------------------------------------------------------------->
+
+	<h2 id="wlan">WLAN (Wireless Local Area Network)</h2>
+	<p class="descricao">A WLAN (Wireless Local Area Network), ou Rede Local Sem Fio, é um tipo de rede que permite a conexão de dispositivos sem a utilização de cabos, utilizando sinais de rádio para transmitir dados. Ela é basicamente uma versão sem fio da LAN tradicional.</p>
+
+	<p class="descricao">A WLAN é muito utilizada em residências, escolas, empresas, aeroportos, shoppings e diversos outros ambientes que necessitam de mobilidade. O exemplo mais comum de WLAN é a rede Wi-Fi, que permite conectar smartphones, notebooks, tablets, smart TVs e outros dispositivos à internet e entre si.</p>
+
+	<p class="descricao">O funcionamento da WLAN ocorre por meio de um roteador ou ponto de acesso (Access Point), que transmite o sinal sem fio utilizando frequências como 2.4 GHz e 5 GHz. A frequência 2.4 GHz possui maior alcance, porém pode sofrer mais interferência. Já a frequência 5 GHz oferece maior velocidade, mas com menor alcance.</p>
+
+	<p class="descricao">Em relação à velocidade, as redes WLAN modernas podem atingir taxas muito altas de transmissão, dependendo do padrão utilizado (como Wi-Fi 4, Wi-Fi 5 ou Wi-Fi 6). Apesar disso, redes sem fio geralmente podem sofrer interferências de paredes, objetos físicos e outros aparelhos eletrônicos.</p>
+
+	<p class="descricao">Entre as principais vantagens da WLAN estão a mobilidade, a praticidade de instalação e a redução do uso de cabos. Por outro lado, é necessário investir em segurança, utilizando senhas fortes e protocolos de criptografia, para evitar acessos não autorizados.</p>
+
+	<p class="descricao">Dessa forma, a WLAN é uma solução eficiente e moderna para conectar dispositivos dentro de uma área local sem a necessidade de fios, oferecendo flexibilidade e facilidade de uso no dia a dia.</p>
+
+<!---------------------------------------------------------------------------------------------------------DIVISORIA----------------------------------------------------------------------------------------------------------------------->
+
+<h2>Questionário sobre Redes de Computadores(Gabarito no fim da página)</h2>
+
+<form>
+
+    <!-- Pergunta 1 -->
+    <label>1) Qual rede é utilizada dentro de uma casa ou empresa pequena?</label><br>
+    <input type="radio" name="p1"> LAN<br>
+    <input type="radio" name="p1"> WAN<br>
+    <input type="radio" name="p1"> MAN<br><br>
+
+    <!-- Pergunta 2 -->
+    <label>2) Qual rede cobre grandes distâncias, como países ou continentes?</label><br>
+    <input type="radio" name="p2"> PAN<br>
+    <input type="radio" name="p2"> WAN<br>
+    <input type="radio" name="p2"> CAN<br><br>
+
+    <!-- Pergunta 3 -->
+    <label>3) Quais tecnologias podem ser usadas em uma rede LAN?</label><br>
+    <input type="checkbox"> Cabo Ethernet
+    <input type="checkbox"> Wi-Fi
+    <input type="checkbox"> Satélite<br><br>
+
+    <!-- Pergunta 4 -->
+    <label>4) A rede PAN é usada principalmente para:</label><br>
+    <input type="radio" name="p4"> Conectar dispositivos pessoais próximos<br>
+    <input type="radio" name="p4"> Conectar cidades<br>
+    <input type="radio" name="p4"> Conectar países<br><br>
+
+    <!-- Pergunta 5 -->
+    <label>5) A SAN é utilizada principalmente para:</label><br>
+    <input type="radio" name="p5"> Armazenamento de dados<br>
+    <input type="radio" name="p5"> Conexão residencial<br>
+    <input type="radio" name="p5"> Comunicação via Bluetooth<br><br>
+
+    <button type="button">Enviar</button>
+
+</form>
+
+<p class="descricao"> Pergunta 1: LAN</p>
+<p class="descricao"> Pergunta 2: WAN</p>
+<p class="descricao"> Pergunta 3: Cabo ethernet e Wi-Fi</p>
+<p class="descricao"> Pergunta 4:Conectar dispositivos pessoais próximos</p>
+<p class="descricao"> Pergunta 5: Armazenamento de dados</p>
+</body>
+</html>
+
+
