@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Pet Virtual</title>
+
+    <!-- DaisyUI + Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+</head>
+
+<body class="bg-pink-50 min-h-screen flex flex-col items-center justify-center"
+style="
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+">
+
+    <!-- Avatar + nome -->
+    <div class="w-full flex items-center justify-start p-4 gap-4">
+        <div class="avatar">
+            <div class="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img src="b_c.png" />
+            </div>
+        </div>
+
+        <input 
+            type="text" 
+            placeholder="Nome da criatura..." 
+            class="input input-secondary"
+        />
+    </div>
+
+    <!-- Criatura -->
+    <img id="b" src="b_n.png" class="w-full max-w-md"/>
+
+    <!-- Botão comida -->
+    <img 
+        id="btn"
+        src="btn.png"
+        class="w-32 mt-10 active:scale-95 transition"
+        onclick="alimentar()"
+    />
+
+    <script src="script.js"></script>
+
+
+    <button 
+  onclick="mostrarFerlini()"
+   style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    padding: 8px;
+    font-size: 12px;
+    z-index: 9999;
+  ">
+  GOSTOZIN
+</button>
+
+<!-- Imagem do Ferlini -->
+<img 
+  id="ferlini" 
+  src="ferlini.png" 
+  class="hidden fixed top-1/2 left-1/2 w-64 -translate-x-1/2 -translate-y-1/2 rounded-xl shadow-2xl"
+/>
+</body>
+</html>
