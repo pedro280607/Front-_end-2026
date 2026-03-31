@@ -14,7 +14,7 @@ let intervalo = null;
 let time_click = null;
 let time_out = null;
 
-// ⏱️ controla o tempo
+
 function controlador (){
     if(intervalo) clearInterval(intervalo)
         
@@ -33,7 +33,7 @@ function controlador (){
     }, 1000);
 }
 
-// 🍓 função alimentar
+
 function alimentar() {
 
     cria.src = estados.comendo;
@@ -53,7 +53,7 @@ function alimentar() {
     }, 1000);
 }
 
-// 🌙 fundo dia/noite
+
 const fundoDia = "background.png";
 const fundoNoite = "background_noite.png";
 let horas = 0;
@@ -85,6 +85,6 @@ function mostrarFerlini() {
     }, 5000);
 }
 
-// iniciar tudo
+
 controlador();
 atualizarFundo();
