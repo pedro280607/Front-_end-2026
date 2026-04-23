@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Grupos e Fatos</title>
+
+    <style>
+        body {
+            background-color: #ADD8E6;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            padding: 20px;
+            width: 280px;
+            color: #333;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        details {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Grupos e Fatos</h1>
+
+    <div class="container">
+
+        <div class="card" id="grupo-a">
+            <h2>🅰️ Grupo A</h2>
+            <ul>
+                <li>México</li>
+                <li>África do Sul</li>
+                <li>Coreia do Sul</li>
+                <li>República Tcheca</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p>O jogo de abertura será México x África do Sul.</p>
+                <p>Histórico equilibrado entre Coreia do Sul e seleções europeias.</p>
+            </details>
+        </div>
+
+        <div class="card" id="grupo-b">
+            <h2>🅱️ Grupo B</h2>
+            <ul>
+                <li>Canadá</li>
+                <li>Suíça</li>
+                <li>Catar</li>
+                <li>Bósnia</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p>O Canadá joga em casa.</p>
+                <p>Catar e Suíça já se enfrentaram em amistosos.</p>
+            </details>
+        </div>
+
+        <div class="card" id="grupo-c">
+            <h2>🅲 Grupo C</h2>
+            <ul>
+                <li>Brasil</li>
+                <li>Marrocos</li>
+                <li>Haiti</li>
+                <li>Escócia</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <p>Brasil, Marrocos e Escócia já dividiram grupo em 1998.</p>
+                <p>Brasil nunca perdeu para a Escócia em Copas.</p>
+            </details>
+        </div>
+
+    </div>
+
+</body>
+</html>

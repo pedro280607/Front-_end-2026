@@ -1,0 +1,14 @@
+Dificuldades Encontradas na Prova
+
+As principais dificuldades encontradas durante a realização da prova foram nos exercícios 3 e 4, relacionados a JavaScript.
+
+O conteúdo de JavaScript foi abordado de forma muito superficial durante as aulas, o que dificultou bastante a compreensão e a aplicação prática no momento da prova.
+
+No exercício 3, consegui realizar boa parte com auxílio de inteligência artificial,pois mesmo após estudar o conteúdo por conta própria, ainda não havia compreendido 
+completamente a lógica necessária para desenvolver a atividade sozinho.
+
+Já no exercício 4, tive ainda mais dificuldade. Sinceramente, não consegui entender como resolver a questão por conta própria. Mesmo utilizando apoio de IA, o resultado 
+não funcionou corretamente e a estrutura da página acabou ficando desorganizada, sem apresentar o comportamento esperado.
+
+Resumindo: a maior dificuldade, não apenas minha, mas também de grande parte da sala, foi o conteúdo de JavaScript, justamente por não ter sido aprofundado em aula. 
+Mesmo buscando estudar de forma independente, trata-se de um conteúdo que não é simples de entender sem uma base mais sólida.
