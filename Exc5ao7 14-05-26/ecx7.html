@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validador de Segurança Infinity</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.card{
+    width:450px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#0f172a;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-bottom:20px;
+    outline:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.painel{
+    margin-top:25px;
+    background:#f1f5f9;
+    padding:20px;
+    border-radius:10px;
+    line-height:2;
+}
+
+.painel p{
+    border-bottom:1px solid #ccc;
+    padding:5px 0;
+}
+
+.valido{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.invalido{
+    color:#dc2626;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>Validador Infinity</h1>
+
+    <label>Digite o número do cartão:</label>
+
+    <input type="text" id="cartao" placeholder="Ex: 4111 1111 1111 1111">
+
+    <button onclick="analisarCartao()">
+        Analisar Cartão
+    </button>
+
+    <div class="painel" id="resultado">
+
+        <p>Status: ---</p>
+        <p>Bandeira: ---</p>
+        <p>Categoria de Setor: ---</p>
+        <p>Banco Emissor: ---</p>
+
+    </div>
+
+</div>
+
+<script>
+
+function analisarCartao(){
+
+    let numero = document.getElementById("cartao").value;
+
+    // remove espaços e pontos
+    numero = numero.replace(/\s/g, "").replace(/\./g, "");
+
+    // valida tamanho
+    if(numero.length < 13 || numero.length > 16 || isNaN(numero)){
+
+        document.getElementById("resultado").innerHTML = `
+            <p class="invalido">
+                Número inválido!
+            </p>
+        `;
+
+        return;
+    }
+
+    // =========================
+    // ALGORITMO DE LUHN
+    // =========================
+
+    let soma = 0;
+
+    let numerosInvertidos = numero.split("").reverse();
+
+    for(let i = 0; i < numerosInvertidos.length; i++){
+
+        let digito = Number(numerosInvertidos[i]);
+
+        // posições pares
+        if(i % 2 != 0){
+
+            digito = digito * 2;
+
+            if(digito > 9){
+                digito = digito - 9;
+            }
+        }
+
+        soma += digito;
+    }
+
+    let valido = soma % 10 === 0;
+
+    // =========================
+    // BANDEIRA
+    // =========================
+
+    let bandeira = "Desconhecida";
+
+    if(numero.startsWith("4")){
+        bandeira = "Visa";
+    }
+
+    else if(
+        numero.startsWith("51") ||
+        numero.startsWith("52") ||
+        numero.startsWith("53") ||
+        numero.startsWith("54") ||
+        numero.startsWith("55")
+    ){
+        bandeira = "MasterCard";
+    }
+
+    else if(
+        numero.startsWith("34") ||
+        numero.startsWith("37")
+    ){
+        bandeira = "American Express";
+    }
+
+    else if(numero.startsWith("6")){
+        bandeira = "Discover";
+    }
+
+    // =========================
+    // SETOR INDUSTRIAL
+    // =========================
+
+    let setor = "";
+
+    if(
+        numero.startsWith("4") ||
+        numero.startsWith("5")
+    ){
+        setor = "Instituições Financeiras";
+    }
+
+    else if(
+        numero.startsWith("34") ||
+        numero.startsWith("37")
+    ){
+        setor = "Viagens e Entretenimento";
+    }
+
+    else if(numero.startsWith("6")){
+        setor = "Comércio e Bancos";
+    }
+
+    else{
+        setor = "Setor Não Identificado";
+    }
+
+    // =========================
+    // BANCO EMISSOR
+    // =========================
+
+    let banco = "Banco Não Identificado";
+
+    if(numero.startsWith("4")){
+        banco = "Banco Visa Internacional";
+    }
+
+    else if(numero.startsWith("5")){
+        banco = "Banco Master Finance";
+    }
+
+    else if(
+        numero.startsWith("34") ||
+        numero.startsWith("37")
+    ){
+        banco = "Banco American Express";
+    }
+
+    else if(numero.startsWith("6")){
+        banco = "Discover Financial";
+    }
+
+    // =========================
+    // EXIBE RESULTADO
+    // =========================
+
+    document.getElementById("resultado").innerHTML = `
+
+        <p>
+            Status:
+            <span class="${valido ? 'valido' : 'invalido'}">
+                ${valido ? 'Válido' : 'Inválido'}
+            </span>
+        </p>
+
+        <p>
+            Bandeira: ${bandeira}
+        </p>
+
+        <p>
+            Categoria de Setor: ${setor}
+        </p>
+
+        <p>
+            Banco Emissor: ${banco}
+        </p>
+
+    `;
+}
+
+</script>
+
+</body>
+</html>

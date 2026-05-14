@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinity Bank - Crédito para Eventos</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.card{
+    width:420px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#0f172a;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+select,
+input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.resultado{
+    margin-top:25px;
+    padding:15px;
+    background:#f1f5f9;
+    border-radius:10px;
+    line-height:2;
+}
+
+.resultado p{
+    border-bottom:1px solid #ccc;
+    padding:5px 0;
+}
+
+.total{
+    font-weight:bold;
+    color:#16a34a;
+    font-size:18px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>Crédito para Eventos</h1>
+
+    <label>Escolha o Pacote:</label>
+
+    <select id="pacote">
+        <option value="50">Standard - R$ 50,00</option>
+        <option value="80">Premium - R$ 80,00</option>
+        <option value="120">Infinity Deluxe - R$ 120,00</option>
+    </select>
+
+    <label>Quantidade de Pessoas:</label>
+
+    <input type="number" id="pessoas" placeholder="Digite a quantidade">
+
+    <button onclick="calcular()">Calcular Orçamento</button>
+
+    <div class="resultado" id="resultado">
+
+        <p>Custo Bruto: R$ 0.00</p>
+        <p>Taxa de Serviço: R$ 0.00</p>
+        <p>Desconto: R$ 0.00</p>
+        <p class="total">Total Final: R$ 0.00</p>
+
+    </div>
+
+</div>
+
+<script>
+
+function calcular(){
+
+    let pacote = Number(document.getElementById("pacote").value);
+
+    let pessoas = Number(document.getElementById("pessoas").value);
+
+    if(pessoas <= 0){
+        alert("Digite uma quantidade válida!");
+        return;
+    }
+
+    // cálculo base
+    let custoBruto = pacote * pessoas;
+
+    // taxa de serviço
+    let taxaServico = custoBruto * 0.10;
+
+    // total com taxa
+    let totalComTaxa = custoBruto + taxaServico;
+
+    // desconto
+    let desconto = 0;
+
+    if(pessoas > 100){
+        desconto = totalComTaxa * 0.05;
+    }
+
+    // total final
+    let totalFinal = totalComTaxa - desconto;
+
+    document.getElementById("resultado").innerHTML = `
+    
+        <p>Custo Bruto: R$ ${custoBruto.toFixed(2)}</p>
+
+        <p>Taxa de Serviço: R$ ${taxaServico.toFixed(2)}</p>
+
+        <p>Desconto Aplicado: R$ ${desconto.toFixed(2)}</p>
+
+        <p class="total">Total Final: R$ ${totalFinal.toFixed(2)}</p>
+
+    `;
+}
+
+</script>
+
+</body>
+</html>
